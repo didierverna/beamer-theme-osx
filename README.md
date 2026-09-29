@@ -16,6 +16,9 @@ distributions of LaTeX version 2008 or later.
 
 Beamer Theme OSX consists of the files listed in the file `MANIFEST.md`.
 
+## Resources
+ - [Project homepage](didierverna.net/projects/doceng/beamer-theme-osx)
+ - [Project repository](github.com/didierverna/beamer-theme-osx)
 
 ## Installation
 From the source directory, type `l3build install` to install the theme
