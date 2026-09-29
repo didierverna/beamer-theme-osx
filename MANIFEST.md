@@ -1,4 +1,4 @@
-# Manifest for beamertheme-osx
+# Manifest for beamer-theme-osx
 
 This file is a listing of all files considered to be part of this package.
 It is automatically generated with `l3build manifest`.
