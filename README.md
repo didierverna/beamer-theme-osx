@@ -1,4 +1,4 @@
-# BeamerThemeOSX
+# Beamer Theme OSX
 *A MacOS X 10.5 (Leopard) look for your slides.*
 ![Logo](img/btosxlogo.png "Logo")
 
@@ -6,15 +6,15 @@ Copyright (C) 2026 Didier Verna
 
 Author: Didier Verna <didier@didierverna.net>
 
-This file is part of BeamerThemeOSX.
+This file is part of Beamer Theme OSX.
 
-BeamerThemeOSX may be distributed and/or modified under the conditions of the
-LaTeX Project Public License, either version 1.3c of this license or (at your
-option) any later version. The latest version of this license is in
+Beamer Theme OSX may be distributed and/or modified under the conditions of
+the LaTeX Project Public License, either version 1.3c of this license or (at
+your option) any later version. The latest version of this license is in
 http://www.latex-project.org/lppl.txt and version 1.3c or later is part of all
 distributions of LaTeX version 2008 or later.
 
-BeamerThemeOSX consists of the files listed in the file `MANIFEST.md`.
+Beamer Theme OSX consists of the files listed in the file `MANIFEST.md`.
 
 
 ## Installation
