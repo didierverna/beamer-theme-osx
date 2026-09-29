@@ -1,0 +1,59 @@
+%% beamerthemeosx.ins --- Docstrip driver for BeamerThemeOSX
+
+%% Copyright (C) 2026 Didier Verna
+
+%% Author: Didier Verna <didier@didierverna.net>
+
+%% This file is part of BeamerThemeOSX.
+
+%% BeamerThemeOSX may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license or
+%% (at your option) any later version. The latest version of this license is
+%% in http://www.latex-project.org/lppl.txt and version 1.3c or later is part
+%% of all distributions of LaTeX version 2008 or later.
+
+%% BeamerThemeOSX consists of the files listed in the file `MANIFEST.md'.
+
+
+%%% Commentary:
+
+
+%%% Code:
+
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+
+\preamble
+
+  Copyright (C) 2026 Didier Verna
+
+  This file is part of BeamerThemeOSX.
+
+  BeamerThemeOSX may be distributed and/or modified under the conditions of
+  the LaTeX Project Public License, either version 1.3c of this license or (at
+  your option) any later version. The latest version of this license is in
+  https://www.latex-project.org/lppl.txt and version 1.3c or later is part of
+  all distributions of LaTeX version 2008 or later.
+
+\endpreamble
+
+\postamble
+
+  \outFileName ends here
+
+\endpostamble
+
+\usedir{tex/latex/beamertheme-osx}
+
+\generate{%
+  \file{beamerthemeosx.sty}{\from{beamerthemeosx.dtx}{theme}}
+  \file{beamerinnerthemeosx.sty}{\from{beamerthemeosx.dtx}{inner}}
+  \file{beamerouterthemeosx.sty}{\from{beamerthemeosx.dtx}{outer}}
+  \file{beamercolorthemeosx.sty}{\from{beamerthemeosx.dtx}{color}}
+  \file{beamerfontthemeosx.sty}{\from{beamerthemeosx.dtx}{font}}
+}
+
+\endbatchfile
+
+%% beamerthemeosx.ins ends here

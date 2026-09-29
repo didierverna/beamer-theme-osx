@@ -1,0 +1,112 @@
+\documentclass[aspectratio=1610]{beamer}
+
+\usetheme{osx}
+\btosxwebsite[didierverna.info]{https://didierverna.info}
+\btosxx{didierverna}
+\btosxfacebook{didier.verna}
+\btosxlinkedin{didierverna}
+\btosxcopyright[string=all rights reserved.]
+\btosxbuild{Build 1.0}
+\setlength\BTOSXFolderSep{30pt}
+\definecolor{BTOSXCurrentSectionColor}{named}{yellow}
+
+
+\title{Beamer Theme OSX}
+\subtitle{An OSX 10.5 (Leopard) look for your slides}
+\author{Didier Verna}
+\institute{\em Resistance is futile.}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\begin{frame}[t]{Geometry values}
+  hoffset = \the\hoffset, voffset = \the\voffset\\
+  oddsidemargin = \the\oddsidemargin\\
+  topmargin = \the\topmargin\\
+  headheight = \the\headheight, headsep = \the\headsep\\
+  textheight = \the\textheight, textwidth = \the\textwidth\\
+  marginparsep = \the\marginparsep, marginparwidth = \the\marginparwidth\\
+  footskip = \the\footskip\\
+
+  marginparpush = \the\marginparpush\\
+  paperwidth = \the\paperwidth, paperheight = \the\paperheight\\
+
+  beamer@leftsidebar = \the\csname beamer@leftsidebar\endcsname\\
+  beamer@rightsidebar = \the\csname beamer@rightsidebar\endcsname\\
+  beamer@leftmargin = \the\csname beamer@leftmargin\endcsname\\
+  beamer@rightmargin = \the\csname beamer@rightmargin\endcsname
+\end{frame}
+
+\section[First]{First Section}
+\subsection[First First]{First Subsection of the First Section}
+\begin{frame}{A Frame}
+  Some text bla bla bla.
+  \begin{itemize}
+  \item Some item
+  \item Some other item
+  \end{itemize}
+\end{frame}
+
+\subsection[Second First]{Second Subsection of the First Section}
+\begin{frame}{Another Frame}
+  Some text bla bla bla.
+  \begin{block}{A block}
+    With some block contents
+  \end{block}
+\end{frame}
+
+\section[Second]{Second Section}
+\subsection[First Second]{First Subsection of the Second Section}
+\begin{frame}{Yet Another Frame}
+  Some text bla bla bla.
+  \begin{alertblock}{An alterted block}
+    With some block contents
+  \end{alertblock}
+\end{frame}
+
+\subsection[Second Second]{Second Subsection of the Second Section}
+\begin{frame}{Another Frame Again}
+  \framesubtitle{And what about subtitles ?}
+  Some text bla bla bla.
+  \begin{exampleblock}{An example block}
+    With some block contents
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[t]{Text margins test}
+  \framesubtitle{And what about subtitles ?}
+  And this is some very long text in order to test for the contents margins,
+  so that, you know, it all remains within the bounds of this cute little Mac
+  OSX like window that I've come up with in this super cool Beamer theme
+  which, BTW, demonstrates my expertise level in mastering Tikz, because I
+  gotta tell ya my friend, all of this is somewhat tricky with a 1000 pages or
+  so long manual, and such an amount of\ldots syntax!
+  \par\bigskip\par
+  And this is some very long text in order to test for the contents margins,
+  so that, you know, it all remains within the bounds of this cute little Mac
+  OSX like window that I've come up with in this super cool Beamer theme
+  which, BTW, demonstrates my expertise level in mastering Tikz, because I
+  gotta tell ya my friend, all of this is somewhat tricky with a 1000 pages or
+  so long manual, and such an amount of\ldots syntax!
+  \par\bigskip\par
+  And this is some very long text in order to test for the contents margins,
+  so that, you know, it all remains within the bounds of this cute little Mac
+  OSX like window that I've come up with in this super cool Beamer theme
+  which, BTW, demonstrates my expertise level in mastering Tikz, because I
+  gotta tell ya my friend, all of this is somewhat tricky with a 1000 pages or
+  so long manual, and such an amount of\ldots syntax!
+\end{frame}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

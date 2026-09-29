@@ -1,0 +1,715 @@
+% \iffalse
+%
+% beamerthemeosx.dtx --- docTeX file for BeamerThemeOSX
+%
+% Copyright (C) 2026 Didier Verna
+%
+% Author: Didier Verna <didier@didierverna.net>
+%
+% This file is part of BeamerThemeOSX.
+%
+% BeamerThemeOSX may be distributed and/or modified under the conditions of
+% the LaTeX Project Public License, either version 1.3c of this license or (at
+% your option) any later version. The latest version of this license is in
+% http://www.latex-project.org/lppl.txt and version 1.3c or later is part of
+% all distributions of LaTeX version 2008 or later.
+%
+% BeamerThemeOSX consists of the files listed in the file `MANIFEST.md'.
+%
+%
+% Commentary:
+%
+%
+% Code:
+%
+%<*driver>
+\documentclass{ltxdoc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+\begin{document}
+  \DocInput{beamerthemeosx.dtx}
+  \PrintChanges
+  \PrintIndex
+\end{document}
+%</driver>
+% \fi
+%
+% \CheckSum{0}
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+% \GetFileInfo{beamerthemeosx.dtx}
+% \DoNotIndex{
+%   \@empty, \@onlypreamble, \AtBeginDocument,
+%   \newcounter, \addtocounter,
+%   \newcommand,\renewcommand,\def,\edef,\let,\if,\else,\fi,
+%   \begin, \begingroup, \endgroup, \end, \bfseries,
+%   \centering, \clip, \copyright, \definecolor, \draw, \empty,
+%   \footheight, \headheight, \headsep, \hfill, \href, \hspace,
+%   \IfNoValueTF, \ifnum, \ifx, \includegraphics, \NewDocumentCommand,
+%   \newif, \newlength, \normalsize, \parbox, \path, \ProvidesPackage,
+%   \relax, \RequirePackage, \setcounter, \setlegnth, \small, \the, \tiny,
+%   \vfill, \voffset, \vspace
+% }
+% \MakeShortVerb{\|}
+% \NewDocElement[idxtype=color,printtype=color,idxgroup=color]
+%   {Colour}{colour}
+% \NewDocElement[macrolike=true,printtype=length]{Length}{length}
+%
+%% \makeatletter
+% \def\ps@mystyle{
+%   \def\@oddfoot{\hfil\thepage\hfil}
+%   \def\@evenfoot{\hfil\thepage\hfil}
+%   \def\@evenhead{\hfil\slshape\leftmark}
+%   \def\@oddhead{\slshape\rightmark\hfil}}
+% \makeatother
+% \pagestyle{mystyle}
+% \newcommand\btosxdocmarkright{%
+%   \markright{\hskip-.5\marginparwidth \textsf{BeamerThemeOSX}
+%     2026/09/29 v1.0}}
+% \btosxdocmarkright
+%
+% \title{\textsf{BeamerThemeOSX\footnote{Copyright \copyright{} 2026 Didier
+%   Verna. Released under the LPPL.}}\\
+%   \itshape\normalsize A MacOS X 10.5 (Leopard) look for your slides}
+% \author{Didier Verna\\
+%   \texttt{mailto:didier@didierverna.net}\\
+%   \texttt{https://didierverna.net}}
+% \date{2026/09/29 v1.0}
+%
+% \maketitle
+%
+% \begin{center}
+%   \includegraphics[width=.4\linewidth]{btosxlogo}
+% \end{center}
+%
+% \tableofcontents
+%
+% \section{Installation}
+% From the source directory, type \texttt{l3build install} to install the
+% theme locally. Type \texttt{l3build doc} to compile the documentation. After
+% the theme is installed, you can also switch to the \texttt{demo/} directory
+% and compile the example there. This will allow you to see what the theme
+% looks like. The demonstration source file also contains all the
+% customization commands for quick reference.
+%
+% \section{Usage}
+% Load the theme in the usual Beamer way:
+% \begin{verbatim}
+% \usetheme{osx}
+% \end{verbatim}
+%
+% The following sections provide details on some aspects of the theme that can
+% be customized.
+%
+% \subsection{Social network links}
+% In addition to its usual contents, the title page can display links to
+% several social networks. The links appear as circular logos with a label
+% below. The currently supported links are the following (they appear in that
+% order): personal website, X, Facebook, and LinkedIn. Here is how to specify
+% those links.
+%
+% \smallskip
+%
+% \noindent\DescribeMacro{\btosxwebsite}\oarg{label}\marg{url}\\
+% Specifiy a personal website. The label defaults to the url itself. If you
+% use this macro, you must also include an image file named
+% \texttt{btosxwebsite} in your source directory.\\
+% \DescribeMacro{\btosxx}\oarg{label}\marg{account}\\
+% Specify an X account. The label defaults to \texttt{@account}.\\
+% \DescribeMacro{\btosxfacebook}\oarg{label}\marg{account}\\
+% Specify a Facebook account. The label defaults to \texttt{account}.\\
+% \DescribeMacro{\btosxlinkedin}\oarg{label}\marg{account}\\
+% Specify a LinkedIn account. The label defaults to \texttt{in/account}.
+%
+% \smallskip
+%
+% One caveat: beware of slashes in labels (or, more generally, characters with
+% a depth) as they have a tendency to mess up the vertical alignment. If the
+% problem occurs, simply put those characters in a \cs{raisebox} to cancel
+% their depth.
+%
+% \subsection{Logo}
+% \DescribeMacro{\logo}
+% By default, the theme's logo appears at the top left corner of every slide.
+% If you prefer no logo at all, or a logo of your own, simply use Beamer's
+% regular \cs{logo} mechanism.
+%
+% \subsection{Copyright}
+% \DescribeMacro{\btosxcopyright}\oarg{years=,name=,string=}\\
+% The theme can display a copyright statement at the bottom left of each
+% slide. The statement is of the form ``Copyright \copyright{} \meta{years}
+% \meta{name}, \meta{string}''. All arguments can be empty, but the statement
+% will only be typeset if at least a name or some years are provided.
+% \meta{years} defaults to |\the\year|, \meta{name} defaults the Beamer's
+% notion of a short author's name, and \meta{string} defaults to nothing.
+% Example:
+% \begin{verbatim}
+% \btosxcopyright[years=2000--2026, name=My Lab, string=all rights reserved.]
+% \end{verbatim}
+%
+% \subsection{Build information}
+% \DescribeMacro{\btosxbuild}\marg{string}\\
+% The theme can display a build string at the bottom right of each slide. This
+% is useful if you want to advertise a build date, repository tag, or
+% whatever.
+%
+% \subsection{Navigation bar}
+% In lieu of a navigation bar, the theme displays each section as a desktop
+% folder, in a horizontal row at the top right of each slide. This is the only
+% sectionning level available. The current section is highlighted thanks to a
+% slightly different icon, and a colored label.
+%
+% \smallskip
+%
+% \noindent\DescribeColour{BTOSXCurrentSectionColor} The color used to print
+% the current section's (short) name under the folder icon. The default is set
+% to yellow.
+%
+% \smallskip
+%
+% \noindent\DescribeLength{\BTOSXFolderSep} The length used to separate each
+% section folder's icon in the navigation area. The default is 30pt, which may
+% occasionally be too small if you have long (short) section names.
+%
+% \MaybeStop{\PrintChanges}
+%
+% \section{Implementation}
+% \changes{v1.0}{2026/09/28}{First public version}
+%
+% \subsection{The main theme}
+%    \begin{macrocode}
+%<*theme>
+\ProvidesPackage{beamerthemeosx}[2026/09/29 v1.0 BeamerThemeOSX - Main]
+
+%    \end{macrocode}
+% \begin{macro}{\btosxwebsite}
+%    \begin{macrocode}
+\@onlypreamble\btosxwebsite
+\NewDocumentCommand{\btosxwebsite}{o m}{
+  \def\btosx@websiteurl{#2}
+  \def\btosx@websitelabel{\IfNoValueTF{#1}{#2}{#1}}}
+\btosxwebsite{}
+
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\btosxx}
+%    \begin{macrocode}
+\@onlypreamble\btosxx
+\NewDocumentCommand{\btosxx}{o m}{
+  \def\btosx@xurl{#2}
+  \def\btosx@xlabel{\IfNoValueTF{#1}{@#2}{#1}}}
+\btosxx{}
+
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\btosxfacebook}
+%    \begin{macrocode}
+\@onlypreamble\btosxfacebook
+\NewDocumentCommand{\btosxfacebook}{o m}{
+  \def\btosx@facebookurl{#2}
+  \def\btosx@facebooklabel{\IfNoValueTF{#1}{#2}{#1}}}
+\btosxfacebook{}
+
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\btosxlinkedin}
+%    \begin{macrocode}
+\@onlypreamble\btosxlinkedin
+\NewDocumentCommand{\btosxlinkedin}{o m}{
+  \def\btosx@linkedinurl{#2}
+  \def\btosx@linkedinlabel{%
+    %% The slash messes up vertical alignment.
+    \IfNoValueTF{#1}{in\raisebox{0pt}[0pt][0pt]{/}#2}{#1}}}
+\btosxlinkedin{}
+
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\btosxcopyright}
+%    \begin{macrocode}
+\pgfkeys{
+  /btosx/copyright/years/.store in  = \btosx@copyrightyears,
+  /btosx/copyright/name/.store in   = \btosx@copyrightname,
+  /btosx/copyright/string/.store in = \btosx@copyrightstring}
+
+\newif\ifbtosx@copyright
+\@onlypreamble\btosxcopyright
+\NewDocumentCommand{\btosxcopyright}{O{}}{
+  \def\btosx@copyrightyears{\the\year}
+  \def\btosx@copyrightname{\beamer@shortauthor}
+  \def\btosx@copyrightstring{}
+  \pgfqkeys{/btosx/copyright}{#1}
+  \btosx@copyrightfalse
+  \ifx\btosx@copyrightyears\empty\else\btosx@copyrighttrue\fi
+  \ifx\btosx@copyrightname\empty\else\btosx@copyrighttrue\fi
+}
+\btosxcopyright[name=,years=]
+
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\btosxbuild}
+%    \begin{macrocode}
+\newcommand*\btosxbuild[1]{\def\btosx@build{#1}}
+\btosxbuild{}
+
+%    \end{macrocode}
+% \end{macro}
+%    \begin{macrocode}
+\pgfdeclareimage[height=20pt]{btosxlogo}{btosxlogo}
+\logo{\pgfuseimage{btosxlogo}}
+
+\usefonttheme{osx}
+\usecolortheme{osx}
+\useinnertheme{osx}
+\useoutertheme{osx}
+
+\mode<presentation>
+
+\RequirePackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadings}
+\usetikzlibrary{shadows}
+
+\pgfdeclareimage[width=\paperwidth,height=\paperheight]{%
+  btosxbackground}{btosxbackground}
+\setbeamertemplate{background canvas}{\pgfuseimage{btosxbackground}}
+
+\setbeamersize{text margin left=16pt,text margin right=16pt}
+\newlength\btosx@windowleft
+\newlength\btosx@windowright
+\newlength\btosx@windowtop
+\newlength\btosx@windowbottom
+\newlength\btosx@texttop
+\newlength\btosx@textbottom
+%% #### NOTE: we can't use \AtBeginDocument here because Beamer messes up with
+%% the document environment. This, however, is Beamer's internal view of it.
+\g@addto@macro\beamer@lastminutepatches{%
+  \setlength\btosx@windowleft{\Gm@lmargin - .5\beamer@leftmargin}
+  \setlength\btosx@windowright{\Gm@rmargin - .5\beamer@rightmargin}
+  \setlength\btosx@windowtop{%
+    %% #### NOTE: in fact, I could probably just use \headheight here because
+    %% Beamer arranges for everything else to sum up to 0. However, let's not
+    %% assume the dimensions wouldn't be changed outside Beamer itself.
+    1in + \voffset + \topmargin + \headheight + \headsep}
+  \setlength\btosx@windowbottom{\footheight}
+  %% #### NOTE: the geometry of the gray bars and window buttons is currently
+  %% hard-wired here and below.
+  \setlength\btosx@texttop{\btosx@windowtop + 14pt}
+  \setlength\btosx@textbottom{\footheight + 10pt}}
+
+\pgfdeclareimage[height=8pt]{btosxtopleftbuttons}{btosxtopleftbuttons}
+\pgfdeclareimage[height=8pt]{btosxtoprightbutton}{btosxtoprightbutton}
+\setbeamertemplate{background}{%
+  \ifnum\thepage>1\relax%
+    \begin{tikzpicture}[remember picture,overlay]
+      \path[fill=white,pattern=horizontal lines light gray, rounded corners,
+          drop shadow={fill=black,opacity=.5,
+            shadow xshift=.3ex,shadow yshift=-.3ex}]
+        ($(current page.north west) + (\btosx@windowleft, -\btosx@windowtop)$)
+        rectangle
+        ($(current page.south east) - (\btosx@windowright, -\btosx@windowbottom)$);
+      \clip[rounded corners]
+        ($(current page.north west) + (\btosx@windowleft, -\btosx@windowtop)$)
+        rectangle
+        ($(current page.south east) - (\btosx@windowright, -\btosx@windowbottom)$);
+      \path[shade,top color=btosx@toptopgray,bottom color=btosx@topbottomgray]
+        ($(current page.north west) + (\btosx@windowleft, -\btosx@windowtop)$)
+        rectangle
+        ($(current page.north east) - (\btosx@windowright, \btosx@texttop)$);
+      \node[anchor=north west,inner sep=0pt]
+        at ($(current page.north west)
+        + (\btosx@windowleft + 5pt, -\btosx@windowtop - 3pt)$)
+        {\pgfuseimage{btosxtopleftbuttons}};
+      \node[anchor=north east,inner sep=0pt]
+        at ($(current page.north east)
+        - (\btosx@windowright + 5pt, \btosx@windowtop + 3pt)$)
+        {\pgfuseimage{btosxtoprightbutton}};
+      \draw[color=btosx@grayline]
+        ($(current page.north west) + (\btosx@windowleft, -\btosx@texttop)$)
+        --
+        ($(current page.north east) - (\btosx@windowright, +\btosx@texttop)$);
+      \path[shade,top color=btosx@bottomtopgray,bottom color=btosx@bottombottomgray]
+        ($(current page.south west) + (\btosx@windowleft, \btosx@textbottom)$)
+        rectangle
+        ($(current page.south east) - (\btosx@windowright, -\btosx@windowbottom)$);
+      \draw[color=btosx@grayline]
+        ($(current page.south west) + (\btosx@windowleft, \btosx@textbottom)$)
+        --
+        ($(current page.south east) - (\btosx@windowright, -\btosx@textbottom)$);
+      \end{tikzpicture}
+  \fi}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\mode<all>
+%</theme>
+%    \end{macrocode}
+%
+% \subsection{The inner theme}
+%    \begin{macrocode}
+%<*inner>
+\ProvidesPackage{beamerinnerthemeosx}[2026/09/29 v1.0 BeamerThemeOSX - Inner]
+
+\mode<presentation>
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+
+%% Official brand colours for the inline icons below.
+\definecolor{btosx@facebookblue}{RGB}{24,119,242}
+\definecolor{btosx@linkedinblue}{RGB}{10,102,194}
+
+%% The X, Facebook and LinkedIn logos are drawn inline as real vector paths
+%% Each path below has been pre-translated (in its own coordinate system) so
+%% that it is centred on (0,0); this lets us scale it into place with a plain
+%% xscale/yscale, sidestepping a couple of TikZ quirks (a parser bug on the
+%% SVG "z" then relative "m" idiom, and "path picture" not playing well with
+%% nested scaled/flipped scopes). The raw path data is inlined directly at
+%% each point of use below (rather than behind a \newcommand) because TikZ's
+%% "svg" path operation scans its argument itself and does not expand macros
+%% in it.
+\tikzset{
+  title page link/.style={%
+    circle,draw,thick,minimum width=.8cm,inner sep=0pt},
+  title page link website/.style={%
+    path picture={\node at (path picture bounding box.center) {%
+        \includegraphics[width=.8cm]{btosxwebsite}};}},
+  title page link label/.style={label=below:\parbox{1.5cm}{\centering#1}}}
+
+\setbeamertemplate{title page}
+{
+  \begingroup
+    \centering
+    \vfill
+    \begin{beamercolorbox}[center]{title}
+      \usebeamerfont{title}\inserttitle
+    \end{beamercolorbox}
+    \ifx\insertsubtitle\@empty\else
+      \begin{beamercolorbox}[center]{subtitle}
+        \usebeamerfont{subtitle}\insertsubtitle
+      \end{beamercolorbox}
+    \fi
+    \vspace{2ex}
+    \begin{beamercolorbox}[center]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[center]{institute}
+      \usebeamerfont{institute}\insertinstitute
+    \end{beamercolorbox}
+    \vspace{2ex}
+    \begin{beamercolorbox}[center]{date}
+      \usebeamerfont{date}\insertdate
+    \end{beamercolorbox}
+    \vspace{5ex}
+    \usebeamercolor{links}\usebeamerfont{links}
+    \begin{tikzpicture}[color=fg,fill=bg]
+      \ifx\btosx@websiteurl\@empty\else
+        \node[title page link,title page link website,
+          title page link label={\href{\btosx@websiteurl}{\btosx@websitelabel}}]
+          {};
+      \fi
+    \end{tikzpicture}
+    \begin{tikzpicture}[color=fg,fill=bg]
+      \ifx\btosx@xurl\@empty\else
+        \node[title page link,fill=black,
+          title page link label={%
+            \href{http://www.x.com/\btosx@xurl}{\btosx@xlabel}}]
+          {};
+        \begin{scope}[xscale=.5cm/24,yscale=-.5cm/24]
+          \path[fill=white] svg{%
+            M 6.244 -9.75h 3.308l -7.227 8.26 8.502 11.24H 4.17l -5.214
+            -6.817L -7.01 9.75H -10.32l 7.73 -8.835L -10.746 -9.75H
+            -3.92l 4.713 6.231z
+            M 5.083 7.77h 1.833L -4.916 -7.874H -6.883z};
+        \end{scope}
+      \fi
+    \end{tikzpicture}
+    \begin{tikzpicture}[color=fg,fill=bg]
+      \ifx\btosx@facebookurl\@empty\else
+        \node[title page link,fill=btosx@facebookblue,
+          title page link label={%
+            \href{http://www.facebook.com/\btosx@facebookurl}{%
+              \btosx@facebooklabel}}] {};
+        \begin{scope}[xscale=.46cm/15.5465,yscale=-.46cm/15.5465]
+          \path[fill=white] svg{%
+            M 1.2802 0.6818v 7.0915H -1.755v -7.0915h -2.5381v -2.7637h
+            2.5381v -2.0382c 0 -2.3652 1.5363 -3.6531 3.7801 -3.6531
+            1.0749 0 1.9987 0.0752 2.268 0.1089v 2.4719l -1.5566
+            0.0006c -1.2201 0 -1.4563 0.5453 -1.4563 1.3454v 1.7645h
+            2.9104l -0.3789 2.7637h -2.5315Z};
+        \end{scope}
+      \fi
+    \end{tikzpicture}
+    \begin{tikzpicture}[color=fg,fill=bg]
+      \ifx\btosx@linkedinurl\@empty\else%
+        \node[title page link,fill=btosx@linkedinblue,
+          title page link label={%
+            \href{http://www.linkedin.com/in/\btosx@linkedinurl}{%
+              \btosx@linkedinlabel}}] {};
+        \begin{scope}[xscale=.4cm/10.708,yscale=-.4cm/10.708]
+          \path[fill=white] svg{%
+            M -3.047 5.354V -1.871H -5.448v 7.225z
+            M -4.247 -2.858c 0.837 0 1.358 -0.554 1.358 -1.248 -0.015
+            -0.709 -0.52 -1.248 -1.342 -1.248S -5.59 -4.814 -5.59
+            -4.106c 0 0.694 0.521 1.248 1.327 1.248z
+            M 0.661 5.354V 1.319c 0 -0.216 0.016 -0.432 0.08 -0.586
+            0.173 -0.431 0.568 -0.878 1.232 -0.878 0.869 0 1.216
+            0.662 1.216 1.634v 3.865h 2.401V 1.21c 0 -2.22 -1.184
+            -3.252 -2.764 -3.252 -1.274 0 -1.845 0.7 -2.165 1.193v
+            0.025h -0.016l 0.016 -0.025V -1.871h -2.4c 0.03 0.678 0
+            7.225 0 7.225z};
+        \end{scope}
+      \fi
+    \end{tikzpicture}
+    \vfill
+  \endgroup
+}
+
+\mode<all>
+%</inner>
+%    \end{macrocode}
+%
+% \subsection{The outer theme}
+%    \begin{macrocode}
+%<*outer>
+\ProvidesPackage{beamerouterthemeosx}[2026/09/29 v1.0 BeamerThemeOSX - Outer]
+
+\mode<presentation>
+
+\RequirePackage{calc}
+\RequirePackage{tikz}
+\usetikzlibrary{calc}
+
+\setbeamertemplate{frametitle}{%
+  \begin{tikzpicture}[remember picture,overlay,
+    every node/.style={anchor=north west,align=left,inner sep=1pt}]
+    \node at ($(current page.north west)
+              + (\btosx@windowleft + 38pt,-\btosx@windowtop)$)
+      {\insertframetitle};
+  \end{tikzpicture}%
+}
+
+
+%% Logo
+\setbeamertemplate{insert logo}{\tikz[inner sep=0pt] \node { \insertlogo };}
+
+
+%% Headline
+\newcounter{@btosxfolderposition}
+%    \end{macrocode}
+% \begin{length}{\BTOSXFolderSep}
+%    \begin{macrocode}
+\newlength\BTOSXFolderSep\setlength\BTOSXFolderSep{30pt}
+%    \end{macrocode}
+% \end{length}
+%    \begin{macrocode}
+%% #### NOTE: ideally, I would have preferred to tweak \voffset or \topmargin
+%% here, but I cannot because because this would shift the whole Beamer frame
+%% (including background pictures). So let's make this vertical space part of
+%% the headline directly.
+\newlength\@btosxheadlinesep\setlength\@btosxheadlinesep{4pt}
+
+%% #### NOTE: Beamer determines the headline's height automatically, right at
+%% the beginning of the document, as described in section 8.2.1 of the
+%% manual. This means that I need to typeset the headline even on the title
+%% page. Otherwise, Beamer would think it's size is 0.
+\setbeamertemplate{headline}{%
+  \setcounter{@btosxfolderposition}{0}%
+  \vspace{\@btosxheadlinesep}
+  \begin{beamercolorbox}{headline}%
+    \insertsectionnavigationhorizontal{\paperwidth}{%
+      %% The 4pt are because of the window's round corners. It looks better
+      %% like this IMO.
+      \hspace{\btosx@windowleft}\hspace{4pt}\usebeamertemplate{insert logo}%
+      \hfill%
+      \begin{tikzpicture}[inner sep=0pt,x=\BTOSXFolderSep]}{%
+      \end{tikzpicture}%
+      %% The 4pt are because of the window's round corners. It looks better
+      %% like this IMO.
+      \hspace{\Gm@rmargin}\hspace{4pt}}%
+  \end{beamercolorbox}%
+  \vspace{\@btosxheadlinesep}
+}
+
+%% #### NOTE: we need to use the font option in order to process Beamer color
+%% names. The color option only understands xcolor names.
+
+\pgfdeclareimage[height=15pt]{btosxfolder}{btosxfolder}
+\setbeamertemplate{section in head/foot shaded}{%
+  \node[label={[font={\usebeamercolor[fg]{section in head/foot shaded}}]%
+      below:\insertsectionhead}]
+    at (\the@btosxfolderposition,0)
+    {\pgfuseimage{btosxfolder}};
+  \addtocounter{@btosxfolderposition}{1}}
+
+\pgfdeclareimage[height=15pt]{btosxfoldercurrent}{btosxfoldercurrent}
+\setbeamertemplate{section in head/foot}{%
+  \node[label={[font={\usebeamercolor[fg]{section in head/foot}}]%
+      below:\insertsectionhead}]
+    at (\the@btosxfolderposition,0)
+    {\pgfuseimage{btosxfoldercurrent}};
+  \addtocounter{@btosxfolderposition}{1}}
+
+
+%% Footline
+
+\setbeamertemplate{window footline left}{%
+  \insertshorttitle%
+  \ifx\beamer@shortsubtitle\empty\else~/~\insertshortsubtitle\fi}
+\setbeamertemplate{window footline center}{}
+\setbeamertemplate{window footline right}{%
+  \insertframenumber/\inserttotalframenumber}
+
+\setbeamertemplate{window footline}{%
+  \ifnum\thepage>1%
+    \begin{tikzpicture}[overlay,remember picture,
+      every node/.style={inner xsep=5pt,inner ysep=2pt}]
+      \node[anchor=north west,align=left]
+        at ($(current page.south west) + (\btosx@windowleft, \btosx@textbottom)$)
+        { \usebeamertemplate***{window footline left} };
+      \node[anchor=north west,align=center,text width=\paperwidth]
+        at ($(current page.south west) + (\btosx@windowleft, \btosx@textbottom)$)
+        { \usebeamertemplate***{window footline center} };
+      %% #### WARNING: the 3pt inner xsep overrides the global 5pt one in
+      %% order to compensate for a right margin bigger the the left one, for a
+      %% reason I don't understand.
+      \node[anchor=north east,align=right,inner xsep=3pt]
+        at ($(current page.south east) - (\btosx@windowright, -\btosx@textbottom)$)
+        { \usebeamertemplate***{window footline right} };
+    \end{tikzpicture}%
+  \fi%
+}
+
+\setbeamertemplate{footline}{%
+  \usebeamertemplate***{window footline}
+  \begin{beamercolorbox}[leftskip=2pt,rightskip=4pt]{navigation symbols}
+    \raisebox{2pt}{%
+      \ifbtosx@copyright%
+        Copyright \copyright{} \btosx@copyrightyears{} \btosx@copyrightname%
+        \ifx\btosx@copyrightstring\empty\else, \btosx@copyrightstring\fi%
+      \fi}%
+    \hfill%
+    \usebeamertemplate***{navigation symbols}%
+    \hfill%
+    \raisebox{2pt}{\ifx\btosx@build\empty\else\btosx@build\fi}%
+  \end{beamercolorbox}
+  %% Beamer adds 4pt automatically before the footline.
+  \vspace{2pt}}
+
+%% Need this for now because the default one typesets the logo and the navbar
+%% at the bottom right corner of the frame.
+\setbeamertemplate{sidebar right}{}
+
+\mode<all>
+%</outer>
+%    \end{macrocode}
+%
+% \subsection{The color theme}
+%    \begin{macrocode}
+%<*color>
+\ProvidesPackage{beamercolorthemeosx}[2026/09/29 v1.0 BeamerThemeOSX - Color]
+
+\mode<presentation>
+%    \end{macrocode}
+% \begin{colour}{BTOSXCurrentSectionColor}
+%    \begin{macrocode}
+\definecolor{BTOSXCurrentSectionColor}{named}{yellow}
+%    \end{macrocode}
+% \end{colour}
+%    \begin{macrocode}
+%% For the frame components:
+\definecolor{btosx@bottombottomgray}{RGB}{147,147,147}
+\definecolor{btosx@bottomtopgray}{RGB}{181,181,181}
+\definecolor{btosx@topbottomgray}{RGB}{186,186,186}
+\definecolor{btosx@toptopgray}{RGB}{198,198,198}
+\definecolor{btosx@grayline}{RGB}{85,85,85}
+
+%% For blocks:
+\definecolor{btosx@blocktitlebackground}{RGB}{198,198,198}
+\definecolor{btosx@blockbodybackground}{RGB}{226,230,232}
+
+%% For various uses, including alerts:
+\definecolor{btosx@blue}{RGB}{55,103,167}
+
+\setbeamercolor{background canvas}{fg=white,bg=}
+
+\setbeamercolor{title}{parent=background}
+\setbeamercolor{subtitle}{parent=background}
+\setbeamercolor{author}{parent=background}
+\setbeamercolor{institute}{parent=background}
+\setbeamercolor{date}{parent=background}
+\setbeamercolor{links}{parent=background}
+
+\setbeamercolor{headline}{parent=background}
+\setbeamercolor{section in head/foot shaded}{parent=headline}
+\setbeamercolor{section in head/foot}{parent=section in head/foot shaded,
+  fg=BTOSXCurrentSectionColor}
+
+\setbeamercolor{normal text}{fg=black,bg=white}
+
+\setbeamercolor{frametitle}{parent=normal text}
+
+\setbeamercolor{alerted text}{fg=btosx@blue}
+\setbeamercolor{example text}{fg=btosx@blue}
+
+\setbeamercolor{structure}{fg=btosx@blue}
+
+\setbeamercolor{block title}{fg=black,bg=btosx@blocktitlebackground}
+\setbeamercolor{block body}{bg=btosx@blockbodybackground}
+\setbeamercolor{block title alterted}{parent=block title}
+\setbeamercolor{block body alterted}{parent=block body}
+\setbeamercolor{block body example}{parent=block body}
+\setbeamercolor{block title example}{parent=block title}
+
+\setbeamertemplate{section in toc shaded}[default][50]
+
+\mode<all>
+%</color>
+%    \end{macrocode}
+%
+% \subsection{The font theme}
+%    \begin{macrocode}
+%<*font>
+\ProvidesPackage{beamerfontthemeosx}[2026/09/29 v1.0 BeamerThemeOSX - Font]
+
+\mode<presentation>
+
+\setbeamerfont{title}{series=\bfseries}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{links}{parent=structure,size=\tiny}
+
+\setbeamerfont{frametitle}{parent=normal text,series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\normalsize}
+
+\setbeamerfont{headline}{series=\bfseries}
+\setbeamerfont{section in head/foot shaded}{parent=headline}
+\setbeamerfont{section in head/foot}{parent=section in head/foot shaded}
+
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamercolor{block title alterted}{parent=block title}
+\setbeamercolor{block title example}{parent=block title}
+
+\mode<all>
+%</font>
+%    \end{macrocode}
+%
+% \Finale
+\endinput
