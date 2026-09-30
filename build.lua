@@ -35,6 +35,9 @@ function update_tag (file, content, tagname, tagdate)
    return content
 end
 
+packtdszip = true
+flatten = false
+flattentds = false
 uploadconfig = {
    pkg = "Beamer Theme OSX",
    version = "v1.0",
