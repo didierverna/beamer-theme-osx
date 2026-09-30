@@ -34,3 +34,7 @@ copy all style and image files to your TDS-compliant installation, typically:
 You may also process the demonstration file `demo.tex`. This will allow you to
 see what the theme looks like. The demonstration source file's preamble
 contains all the customization commands for quick reference.
+
+From a TDS-compliant archive (`.tds.zip`), unpack directly into your `[TEXMF]`
+directory. The precompiled documentation and demo files mentioned above will
+be located in `[TEXMF]/doc/latex/beamer-theme-osx/`.
