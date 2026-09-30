@@ -24,14 +24,15 @@ module   = "beamer-theme-osx"
 ctanpkg  = "beamer-theme-osx"
 
 sourcefiles  = {"*.dtx", "*.ins", "img/*.png", "img/*.jpg"}
+demofiles    = {"demo/*.tex", "demo/*.png"}
 installfiles = {"*.sty", "*.png", "*.jpg"}
 
 -- Usage: l3build tag vX.Y [--date YYYY/MM/DD]
 function update_tag (file, content, tagname, tagdate)
    local date = string.gsub (tagdate, "-", "/")
    content = string.gsub (content, "%d%d%d%d/%d%d/%d%d v%d[%w%.%-]*",
-			 date .. " " .. tagname)
-  return content
+			  date .. " " .. tagname)
+   return content
 end
 
 -- CTAN upload: uncomment, fill in, then `l3build upload -m "message"`
