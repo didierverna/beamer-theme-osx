@@ -84,6 +84,9 @@
 %     2026/09/29 v1.0}}
 % \btosxdocmarkright
 %
+% \NewDocumentCommand{\btosxfoothref}{m m}{%
+%   \href{#1}{#2}\footnote{\texttt{#1}}}
+%
 % \title{\textsf{Beamer Theme OSX\footnote{Copyright \copyright{} 2026 Didier
 %   Verna. Released under the LPPL.}}\\
 %   \itshape\normalsize A MacOS X 10.5 (Leopard) look for your slides}
@@ -101,6 +104,13 @@
 % \tableofcontents
 %
 % \section{Installation}
+% \textbf{Resources}
+% \begin{itemize}\setlength\itemsep{0pt}
+% \item \btosxfoothref{didierverna.net/projects/doceng/beamer-theme-osx}{%
+%   Project homepage}
+% \item \btosxfoothref{github.com/didierverna/beamer-theme-osx}{%
+%   Project repository}
+% \end{itemize}
 % From the source directory, type \texttt{l3build install} to install the
 % theme locally. Type \texttt{l3build doc} to compile the documentation. After
 % the theme is installed, you can also switch to the \texttt{demo/} directory

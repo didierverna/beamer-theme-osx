@@ -16,14 +16,21 @@ distributions of LaTeX version 2008 or later.
 
 Beamer Theme OSX consists of the files listed in the file `MANIFEST.md`.
 
-## Resources
+### Resources
  - [Project homepage](didierverna.net/projects/doceng/beamer-theme-osx)
  - [Project repository](github.com/didierverna/beamer-theme-osx)
 
 ## Installation
-From the source directory, type `l3build install` to install the theme
-locally. Type `l3build doc` to compile the documentation. After the theme is
-installed, you can also switch to the `demo/` directory and compile the
+From a repository clone or source directory, type `l3build install` to install
+the theme locally. Type `l3build doc` to compile the documentation. After the
+theme is installed, you may switch to the `demo/` directory and compile the
 example there. This will allow you to see what the theme looks like. The
-demonstration source file also contains all the customization commands for
-quick reference.
+demonstration source file's premable contains all the customization commands
+for quick reference.
+
+From a CTAN archive, run the file `beamerthemeosx.ins` through LaTeX. Then,
+copy all style and image files to your TDS-compliant installation, typically:
+`[TEXMF]/tex/latex/beamer-theme-osx/`. The documentation is already compiled.
+You may also process the demonstration file `demo.tex`. This will allow you to
+see what the theme looks like. The demonstration source file's preamble
+contains all the customization commands for quick reference.
