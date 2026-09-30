@@ -35,18 +35,17 @@ function update_tag (file, content, tagname, tagdate)
    return content
 end
 
--- CTAN upload: uncomment, fill in, then `l3build upload -m "message"`
--- uploadconfig = {
---   pkg = ctanpkg, version = "v0.1.0",
---   author = "Your Name", email = "you@example.org",
---   uploader = "Your Name",
---   license = "lppl1.3c",
---   summary = "Beamer theme osx",
---   description = "A Beamer theme with inner, outer, colour and font components.",
---   ctanPath = "/macros/latex/contrib/beamertheme-osx",
---   repository = "https://github.com/you/beamertheme-osx",
---   bugtracker = "https://github.com/you/beamertheme-osx/issues",
---   update = false,
---   topic = {"beamer-theme"},
---   note = "Uploaded via l3build.",
--- }
+uploadconfig = {
+   pkg = "Beamer Theme OSX",
+   version = "v1.0",
+   author = "Didier Verna",
+   uploader = "Didier Verna",
+   license = "lppl1.3c",
+   summary = "A MacOS X 10.5 (Leopard) look for your slides.",
+   ctanPath = "/macros/latex/contrib/beamer-theme-osx",
+
+   home = "https://www.didierverna.net/projects/doceng/beamer-theme-osx/",
+   repository = "https://github.com/didierverna/beamer-theme-osx",
+   topic = {"Presentation", "Beamer", "Theme"},
+   note = "Uploaded via l3build.",
+}
